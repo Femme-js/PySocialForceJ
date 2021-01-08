@@ -36,7 +36,7 @@ def canvas(image_file=None, **kwargs):
 
 
 @contextmanager
-def animation(length: int, movie_file=None, writer=None, **kwargs):
+def animation(length: int, movie_file=None, writer="pillow", **kwargs):
     """Context for animations."""
     fig, ax = plt.subplots(**kwargs)
     fig.set_tight_layout(True)
