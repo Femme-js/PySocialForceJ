@@ -3,6 +3,7 @@
 from contextlib import contextmanager
 
 import numpy as np
+import Pillow as pillow
 
 try:
     import matplotlib.pyplot as plt
@@ -63,7 +64,7 @@ class SceneVisualizer:
     """Context for social nav vidualization"""
 
     def __init__(
-        self, scene, output=None, writer="imagemagick", cmap="viridis", agent_colors=None, **kwargs
+        self, scene, output=None, writer="pillow", cmap="viridis", agent_colors=None, **kwargs
     ):
         self.scene = scene
         self.states, self.group_states = self.scene.get_states()
